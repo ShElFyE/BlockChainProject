@@ -1,27 +1,21 @@
-
-
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Wallet2.Services;
 using Wallet2;
+using Wallet2.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Добавляем сервисы и зависимости
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<INewService, NewService>();
 builder.Services.AddDbContext<MyDbContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddScoped<IRepository<MyEntity>, MyEntityRepository>();
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<IMyEntityService, MyEntityService>();
-builder.Services.AddControllers();
+builder.Services.AddScoped<IRepository<MyEntity>, MyEntityRepository>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -29,9 +23,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

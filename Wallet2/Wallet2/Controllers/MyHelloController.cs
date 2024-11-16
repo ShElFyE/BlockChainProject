@@ -1,4 +1,4 @@
-﻿/*using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 public class HelloWorldController : ControllerBase
 {
@@ -16,4 +16,3 @@ public class HelloWorldController : ControllerBase
         return Ok(message);
     }
 }
-*/

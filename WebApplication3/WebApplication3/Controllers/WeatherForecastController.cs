@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Wallet2.Controllers
+namespace WebApplication3.Controllers
 {
     [ApiController]
     [Route("[controller]")]
