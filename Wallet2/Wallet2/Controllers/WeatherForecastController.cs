@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+/*using Microsoft.AspNetCore.Mvc;
 
 namespace Wallet2.Controllers
 {
@@ -30,4 +30,4 @@ namespace Wallet2.Controllers
             .ToArray();
         }
     }
-}
+}*/

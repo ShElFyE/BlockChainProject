@@ -4,5 +4,5 @@ public class MyDbContext : DbContext
 {
     public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { }
 
-    public DbSet<MyEntity> MyEntity { get; set; }
+    public DbSet<MyEntity> MyEntities { get; set; }
 }

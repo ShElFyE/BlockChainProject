@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/*using Microsoft.AspNetCore.Mvc;
 
 namespace HelloController.Controllers
 {
@@ -27,3 +27,4 @@ namespace HelloController.Controllers
         }
     }
 }
+*/
